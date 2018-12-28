@@ -26,8 +26,12 @@ syn keyword fpAssignment assign
 
 syn keyword fpComparator in is
 syn match cpComparator "="
+syn match cpComparator "<>"
 syn match cpComparator "<"
 syn match cpComparator ">"
+
+" Loops
+syn keyword fpLoop for to downto do repeat until while break continue
 
 " Constants
 syn keyword fpConstant true false nil maxint
@@ -53,9 +57,10 @@ hi def link fpComment Comment
 hi def link fpComparator Conditional
 hi def link fpConditional Conditional
 hi def link fpConstant Statement
+hi def link fpDefine Macro
 hi def link fpFunction Function
 hi def link fpKeyword Keyword
 hi def link fpLabel Label
-hi def link fpDefine Macro
+hi def link fpLoop Repeat
 
 let b:current_syntax = "freepascal"
