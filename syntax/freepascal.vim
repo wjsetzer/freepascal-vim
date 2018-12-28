@@ -9,9 +9,9 @@ endif
 
 " Keywords
 syn keyword fpBlock begin end
-syn keyword fpConditional if then else
+syn keyword fpConditional case of on if then else
 
-hi def link fpConditional Keyword
 hi def link fpBlock Keyword
+hi def link fpConditional Conditional
 
 let b:current_syntax = "freepascal"
