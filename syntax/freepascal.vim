@@ -21,5 +21,6 @@ syn region fpComment start="//" end="$" contains=fpTodo
 
 hi def link fpBlock Keyword
 hi def link fpConditional Conditional
+hi def link fpComment Comment
 
 let b:current_syntax = "freepascal"
