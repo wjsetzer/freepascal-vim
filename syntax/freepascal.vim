@@ -7,6 +7,9 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Macros
+syn region fpDefine start="{\$" end="}"
+
 " Keywords
 syn keyword fpTodo contained TODO
 syn keyword fpBlock begin end
@@ -22,5 +25,6 @@ syn region fpComment start="//" end="$" contains=fpTodo
 hi def link fpBlock Keyword
 hi def link fpConditional Conditional
 hi def link fpComment Comment
+hi def link fpDefine Macro
 
 let b:current_syntax = "freepascal"
