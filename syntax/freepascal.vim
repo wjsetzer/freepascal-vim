@@ -8,7 +8,6 @@ if exists("b:current_syntax")
 endif
 
 " Macros
-syn region fpDefine start="{\$" end="}"
 
 " Keywords
 syn keyword fpTodo contained TODO
@@ -21,6 +20,9 @@ syn keyword fpConditional case of on if then else
 syn region fpComment start="(\*" end="\*)" contains=fpTodo
 syn region fpComment start="{" end="}" contains=fpTodo
 syn region fpComment start="//" end="$" contains=fpTodo
+
+" Must come after comment?
+syn region fpDefine start="{\$" end="}"
 
 hi def link fpBlock Keyword
 hi def link fpConditional Conditional
