@@ -8,8 +8,10 @@ if exists("b:current_syntax")
 endif
 
 " Keywords
+syn keyword fpBlock begin end
 syn keyword fpConditional if then else
 
 hi def link fpConditional Keyword
+hi def link fpBlock Keyword
 
 let b:current_syntax = "freepascal"
