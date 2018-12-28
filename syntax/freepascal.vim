@@ -17,15 +17,20 @@ syn keyword fpKeyword delete dispose end forward get
 syn keyword fpKeyword goto implementation inherited initialization finalization
 syn keyword fpKeyword insert interface label
 syn keyword fpKeyword library exports new package program put read readln
-syn keyword fpKeyword requires reset rewrite seek unit uses write writeln
+syn keyword fpKeyword requires reset rewrite seek unit write writeln
 
 " Conditional
 syn keyword fpConditional case of on if then else
+
+" Functions
+syn keyword fpFunction record type uses var const constructor destructor property
 
 " Comment
 syn region fpComment start="(\*" end="\*)" contains=fpTodo
 syn region fpComment start="{" end="}" contains=fpTodo
 syn region fpComment start="//" end="$" contains=fpTodo
+
+syn keyword fpLabel label
 
 " Must come after comment regions
 syn region fpDefine start="{\$" end="}"
@@ -33,6 +38,8 @@ syn region fpDefine start="{\$" end="}"
 hi def link fpKeyword Keyword
 hi def link fpConditional Conditional
 hi def link fpComment Comment
+hi def link fpFunction Function
+hi def link fpLabel Label
 hi def link fpDefine Macro
 
 let b:current_syntax = "freepascal"
