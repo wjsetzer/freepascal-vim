@@ -8,8 +8,16 @@ if exists("b:current_syntax")
 endif
 
 " Keywords
+syn keyword fpTodo contained TODO
 syn keyword fpBlock begin end
+
+" Conditional
 syn keyword fpConditional case of on if then else
+
+" Comment
+syn region fpComment start="(\*" end="\*)" contains=fpTodo
+syn region fpComment start="{" end="}" contains=fpTodo
+syn region fpComment start="//" end="$" contains=fpTodo
 
 hi def link fpBlock Keyword
 hi def link fpConditional Conditional
