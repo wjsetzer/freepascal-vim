@@ -107,7 +107,9 @@ if exists("pascal_no_tabs")
   syn match pascalShowTab "\t"
 endif
 
-syn region pascalComment	start="(\*\|{|//"  end="\*)\|}|$" contains=pascalTodo,pascalSpaceError
+syn region pascalComment	start="{"  end="}" contains=pascalTodo,pascalSpaceError
+syn region pascalComment	start="(\*"  end="\*)" contains=pascalTodo,pascalSpaceError
+syn region pascalComment	start="//"  end="$" oneline contains=pascalTodo,pascalSpaceError
 
 
 if !exists("pascal_no_functions")
